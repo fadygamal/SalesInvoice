@@ -102,9 +102,9 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                      <Component id="saveLineButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="createItemLineButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="cancelLineButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="deleteItemLineButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -153,8 +153,8 @@
                   <Component id="deleteInvoiceButton" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="createInvoiceButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="saveLineButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cancelLineButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="createItemLineButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="deleteItemLineButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -253,22 +253,23 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="saveLineButton">
+    <Component class="javax.swing.JButton" name="createItemLineButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Save"/>
+        <Property name="text" type="java.lang.String" value="Create Item"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createItemLineButtonActionPerformed"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="saveLineButton.addActionListener(controller);"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="createItemLineButton.addActionListener(controller);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="cancelLineButton">
+    <Component class="javax.swing.JButton" name="deleteItemLineButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancel"/>
+        <Property name="text" type="java.lang.String" value="Delete Item"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="cancelLineButton.addActionListener(controller);"/>
-        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="deleteItemLineButton.addActionListener(controller);"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">

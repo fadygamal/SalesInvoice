@@ -39,10 +39,10 @@ public class Desgin extends javax.swing.JFrame {
         invoiceTotalLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         lineTable = new javax.swing.JTable();
-        saveLineButton = new javax.swing.JButton();
-        saveLineButton.addActionListener(controller);
-        javax.swing.JButton cancelLineButton = new javax.swing.JButton();
-        cancelLineButton.addActionListener(controller);
+        createItemLineButton = new javax.swing.JButton();
+        createItemLineButton.addActionListener(controller);
+        deleteItemLineButton = new javax.swing.JButton();
+        deleteItemLineButton.addActionListener(controller);
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -92,9 +92,14 @@ public class Desgin extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(lineTable);
 
-        saveLineButton.setText("Save");
+        createItemLineButton.setText("Create Item");
+        createItemLineButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createItemLineButtonActionPerformed(evt);
+            }
+        });
 
-        cancelLineButton.setText("Cancel");
+        deleteItemLineButton.setText("Delete Item");
 
         jLabel5.setText("Invoices Tabel");
 
@@ -152,9 +157,9 @@ public class Desgin extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
-                        .addComponent(saveLineButton)
+                        .addComponent(createItemLineButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cancelLineButton)
+                        .addComponent(deleteItemLineButton)
                         .addGap(133, 133, 133))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
@@ -192,13 +197,17 @@ public class Desgin extends javax.swing.JFrame {
                     .addComponent(deleteInvoiceButton)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(createInvoiceButton)
-                        .addComponent(saveLineButton)
-                        .addComponent(cancelLineButton)))
+                        .addComponent(createItemLineButton)
+                        .addComponent(deleteItemLineButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void createItemLineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createItemLineButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createItemLineButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,8 +247,10 @@ public class Desgin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createInvoiceButton;
+    private javax.swing.JButton createItemLineButton;
     private javax.swing.JLabel customerNameLabel;
     private javax.swing.JButton deleteInvoiceButton;
+    private javax.swing.JButton deleteItemLineButton;
     private javax.swing.JLabel invoiceDateLabel;
     private javax.swing.JLabel invoiceNumLabel;
     private javax.swing.JTable invoiceTable;
@@ -257,7 +268,6 @@ public class Desgin extends javax.swing.JFrame {
     private javax.swing.JTable lineTable;
     private javax.swing.JMenuItem loadFileMenuItem;
     private javax.swing.JMenuItem saveFileMenuItem;
-    private javax.swing.JButton saveLineButton;
     // End of variables declaration//GEN-END:variables
     private ArrayList<Invoice> invoices;
     private Controllers controller = new Controllers(this);

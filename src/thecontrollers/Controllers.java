@@ -48,11 +48,11 @@ public class Controllers implements ActionListener, ListSelectionListener {
             case "Delete Invoice":
                 deleteInvoice();
                 break;
-            case "Save":
-                save();
+            case "Create Item":
+                createItem();
                 break;
-            case "Cancel":
-                cancel();
+            case "Delete Item":
+                deleteItem();
                 break;
             case "createInvoiceCancel":
                 createInvoiceCancel();
@@ -188,12 +188,12 @@ public class Controllers implements ActionListener, ListSelectionListener {
         }
     }
 
-    private void save() {
+    private void createItem() {
         lineDialog = new Linesofdialogs(frame);
         lineDialog.setVisible(true);
     }
 
-    private void cancel() {
+    private void deleteItem() {
         int selectedRow = frame.getLineTable().getSelectedRow();
 
         if (selectedRow != -1) {
